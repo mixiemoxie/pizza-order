@@ -8,6 +8,52 @@
     <title>Pizza Order</title>
   </head>
   <body>
-    
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Order a pizza!<h1>
+        <p>Fill out the form below to order a delicious pizza.<p>
+      </div>
+
+      <div class="pizza-order">
+        <h3>Place your order:</h3>
+        <form id="order-form">
+          <div class='col-sm-4 form-group'>
+            <label for="size">What size pizza would you like?</label>
+            <select id="size" class="form-control">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="extra-large">Extra-Large</option>
+            </select>
+          </div>
+          <div class='col-sm-4 form-group'>
+            <label for="amount">How many pizza's would you like to order?</label>
+            <select id="amount" class="form-control">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class='col-sm-4 form-group'>
+            <label for="topping">What toppings would you like on your pizza?</label> <br>
+            <input type='checkbox' name='topping' class='topping-selection' value="pepperoni"> Pepperoni <br>
+            <input type='checkbox' name='topping' class='topping-selection' value="extra-cheese"> Extra Cheese <br>
+            <input type='checkbox' name='topping' class='topping-selection' value="green-peppers"> Green Peppers <br>
+            <input type='checkbox' name='topping' class='topping-selection' value="pineapple"> Pineapple <br>
+            <input type='checkbox' name='topping' class='topping-selection' value="ham"> Ham <br>
+            <input type='checkbox' name='topping' class='topping-selection' value="anchovies"> Anchovies <br>
+            <input type='checkbox' name='topping' class='topping-selection' value="tomatoes"> Tomatoes <br>
+            <input type='checkbox' name='topping' class='topping-selection' value="salami"> Salami <br>
+            <input type='checkbox' name='topping' class='topping-selection' value="onions"> Onions <br>
+          </div>
+          <br>
+          <button type="submit" class="btn btn-success">Place your order!</button>
+        </form>
+      </div>
+      <br>
+      <br>
+    </div>
   </body>
 </html>
