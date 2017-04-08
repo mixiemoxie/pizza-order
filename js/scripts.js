@@ -26,3 +26,24 @@ Pizza.prototype.price = function() {
 
   return price;
 };
+
+// Front-End User Logic
+$(document).ready(function() {
+  $("form").submit(function(event) {
+    event.preventDefault();
+
+    // Get input values from form
+    var inputtedPizzaSize = $("select#size").val();
+    var inputtedPizzaQuantity = $("select#amount").val();
+
+    // Create new Pizza with new values
+    var newPizza = new Pizza(inputtedPizzaSize, inputtedPizzaQuantity);
+
+    $.each($("input[name='topping']:checked"), function() {
+      newPizza.toppings.push($(this).val());
+    });
+    
+    // Update html with pizza price
+    $("#pizzaPrice").text(newPizza.price());
+  });
+});
